@@ -13,10 +13,13 @@ btn.addEventListener("click", function(){
  //generare 16 numeri casuali da 1 a 100
  for (let i = 1; i <= 16; i++) {
    let randomNumber = Math.floor(Math.random()* 100 +1)
-   contenitore.innerHTML += randomNumber
    console.log(randomNumber)
-   
+   if (randomNumber==quadratoHtml[i]){
+      console.log("errore")
+   }                
 }
+
+
 
 //la cella si colora di azzurro
 // evento click sul quadrato nel quale andiamo a mettere in evidenza con
@@ -32,6 +35,7 @@ for (let i = 0; i < quadrato.length; i++) {
     quadratoEl.addEventListener("click", function(){
        this.classList.toggle("clicked")
        console.log("Numero: ", quadratoEl.innerText)
+       
 
 
    })
