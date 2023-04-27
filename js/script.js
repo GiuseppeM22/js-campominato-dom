@@ -1,7 +1,4 @@
-//prendere id bottone, contenitore e quadrato
-const difficolta = document.getElementById("livelli").value
-console.log(difficolta)
-
+//prendere id bottone, contenitore
 const contenitore = document.querySelector(".container")
 const btn = document.getElementById("play")
 
@@ -12,6 +9,14 @@ btn.addEventListener("click", function(){
     const quadratoHtml = `<div class="square">${i}</div>`
     contenitore.innerHTML += quadratoHtml
  }
+
+ //generare 16 numeri casuali da 1 a 100
+ for (let i = 1; i <= 16; i++) {
+   let randomNumber = Math.floor(Math.random()* 100 +1)
+   contenitore.innerHTML += randomNumber
+   console.log(randomNumber)
+   
+}
 
 //la cella si colora di azzurro
 // evento click sul quadrato nel quale andiamo a mettere in evidenza con
@@ -33,9 +38,11 @@ for (let i = 0; i < quadrato.length; i++) {
    
 }
  
+}) 
 
 
-})
+
+
 
 
 
